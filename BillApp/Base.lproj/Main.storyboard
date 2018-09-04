@@ -81,21 +81,23 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1N0-my-9mh">
-                                                <rect key="frame" x="314" y="12" width="45" height="76"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKg-JN-Qd6">
+                                                <rect key="frame" x="247" y="35" width="120" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="He8-3I-Jef"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="1N0-my-9mh" secondAttribute="trailing" constant="16" id="Drf-YY-H0K"/>
-                                            <constraint firstItem="1N0-my-9mh" firstAttribute="top" secondItem="cus-8c-29i" secondAttribute="top" constant="12" id="F5z-A1-9AD"/>
+                                            <constraint firstAttribute="trailing" secondItem="LKg-JN-Qd6" secondAttribute="trailing" constant="8" id="1sr-jw-byx"/>
                                             <constraint firstAttribute="bottom" secondItem="A2o-M2-cpa" secondAttribute="bottom" constant="12" id="Fjj-2r-QUb"/>
-                                            <constraint firstAttribute="bottom" secondItem="1N0-my-9mh" secondAttribute="bottom" constant="12" id="Q87-RL-TGA"/>
                                             <constraint firstItem="A2o-M2-cpa" firstAttribute="top" secondItem="cus-8c-29i" secondAttribute="top" constant="12" id="WrS-XV-tKf"/>
                                             <constraint firstItem="A2o-M2-cpa" firstAttribute="leading" secondItem="cus-8c-29i" secondAttribute="leading" constant="16" id="egt-we-Zaj"/>
+                                            <constraint firstItem="LKg-JN-Qd6" firstAttribute="centerY" secondItem="A2o-M2-cpa" secondAttribute="centerY" id="ljs-4c-CWU"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8J-cK-ap2">
@@ -107,20 +109,22 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug 23, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft1-NP-7im">
-                                                <rect key="frame" x="257.5" y="12" width="101.5" height="76"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FQg-D1-yAp">
+                                                <rect key="frame" x="247" y="35" width="120" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="eAX-0Y-tZx"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="Ft1-NP-7im" firstAttribute="top" secondItem="R8J-cK-ap2" secondAttribute="top" constant="12" id="9sp-74-RMH"/>
-                                            <constraint firstAttribute="bottom" secondItem="Ft1-NP-7im" secondAttribute="bottom" constant="12" id="KWn-CA-D2z"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ft1-NP-7im" secondAttribute="trailing" constant="16" id="WRL-Zj-Tdz"/>
+                                            <constraint firstAttribute="trailing" secondItem="FQg-D1-yAp" secondAttribute="trailing" constant="8" id="QuC-9f-lNF"/>
                                             <constraint firstItem="hUw-Y5-ISj" firstAttribute="top" secondItem="R8J-cK-ap2" secondAttribute="top" constant="12" id="acU-NQ-ctY"/>
                                             <constraint firstAttribute="bottom" secondItem="hUw-Y5-ISj" secondAttribute="bottom" constant="12" id="mpa-59-HmX"/>
+                                            <constraint firstItem="FQg-D1-yAp" firstAttribute="centerY" secondItem="hUw-Y5-ISj" secondAttribute="centerY" id="ncQ-Tr-PCq"/>
                                             <constraint firstItem="hUw-Y5-ISj" firstAttribute="leading" secondItem="R8J-cK-ap2" secondAttribute="leading" constant="16" id="oT8-l3-Gra"/>
                                         </constraints>
                                     </view>
@@ -155,20 +159,22 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om9-Ej-W5w">
-                                                <rect key="frame" x="307" y="12" width="52" height="76"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cMM-f4-ncc">
+                                                <rect key="frame" x="247" y="35" width="120" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="qA7-5q-QFK"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Om9-Ej-W5w" secondAttribute="trailing" constant="16" id="43m-t1-dJt"/>
+                                            <constraint firstItem="cMM-f4-ncc" firstAttribute="centerY" secondItem="88X-EN-Yhb" secondAttribute="centerY" id="Bgp-fY-rdz"/>
                                             <constraint firstItem="88X-EN-Yhb" firstAttribute="leading" secondItem="kMn-Hb-RjK" secondAttribute="leading" constant="16" id="PAG-3k-aRp"/>
-                                            <constraint firstAttribute="bottom" secondItem="Om9-Ej-W5w" secondAttribute="bottom" constant="12" id="SHb-2t-cvK"/>
                                             <constraint firstItem="88X-EN-Yhb" firstAttribute="top" secondItem="kMn-Hb-RjK" secondAttribute="top" constant="12" id="X6m-9g-rTC"/>
-                                            <constraint firstItem="Om9-Ej-W5w" firstAttribute="top" secondItem="kMn-Hb-RjK" secondAttribute="top" constant="12" id="kRn-hb-FJT"/>
+                                            <constraint firstAttribute="trailing" secondItem="cMM-f4-ncc" secondAttribute="trailing" constant="8" id="XVI-mT-nTg"/>
                                             <constraint firstAttribute="bottom" secondItem="88X-EN-Yhb" secondAttribute="bottom" constant="12" id="v8P-kF-hK9"/>
                                         </constraints>
                                     </view>
@@ -249,6 +255,9 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="cKq-j0-pEZ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="amountTextField" destination="LKg-JN-Qd6" id="Dvm-Da-Ncf"/>
+                        <outlet property="categoryTextField" destination="cMM-f4-ncc" id="azh-l8-HXg"/>
+                        <outlet property="dateTextField" destination="FQg-D1-yAp" id="Vlb-RZ-26R"/>
                         <outlet property="doneButton" destination="cKq-j0-pEZ" id="uLo-iI-Plm"/>
                     </connections>
                 </viewController>
