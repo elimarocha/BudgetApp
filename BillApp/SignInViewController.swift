@@ -29,22 +29,20 @@ class SignInViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         Auth.auth().signIn(withEmail: self.email.text!, password: self.password.text!){ (user, error) in
             if user != nil {
-                print("User has signed in")
+                ToastView.shared.short(self.view, txt_msg: "You logged in")
             }
             if error != nil{
-                print("Can't sign in ")
-                
+                ToastView.shared.short(self.view, txt_msg: "Can't login")
             }
         }
     }
     @IBAction func signup(_ sender: Any) {
         Auth.auth().createUser(withEmail: self.email.text!, password: self.password.text!){ (user, error) in
             if user != nil {
-                print("User has signed up")
+                ToastView.shared.short(self.view, txt_msg: "You signed up")
             }
             if error != nil{
-                print("Can't sign up")
-                
+                ToastView.shared.short(self.view, txt_msg: "Can't signed up")
             }
         }    }
 }
