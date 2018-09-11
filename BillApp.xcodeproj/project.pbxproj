@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C593631213EC4A30095AAE4 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C593630213EC4A30095AAE4 /* CreateAccountViewController.swift */; };
 		2C6482C4213CC0F20044B184 /* toastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6482C3213CC0F20044B184 /* toastMessage.swift */; };
 		2C6B433E21383C9800B3EEC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C6B433D21383C9800B3EEC6 /* GoogleService-Info.plist */; };
 		2C6B43402138556D00B3EEC6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6B433F2138556D00B3EEC6 /* SignInViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C593630213EC4A30095AAE4 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		2C6482C3213CC0F20044B184 /* toastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toastMessage.swift; sourceTree = "<group>"; };
 		2C6B433D21383C9800B3EEC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C6B433F2138556D00B3EEC6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				A83CDFC52131C33900EC16FF /* LaunchScreen.storyboard */,
 				A83CDFC02131C33800EC16FF /* Main.storyboard */,
 				2C6482C3213CC0F20044B184 /* toastMessage.swift */,
+				2C593630213EC4A30095AAE4 /* CreateAccountViewController.swift */,
 			);
 			path = BillApp;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C593631213EC4A30095AAE4 /* CreateAccountViewController.swift in Sources */,
 				A83CDFD52131DB6600EC16FF /* BillTableViewCell.swift in Sources */,
 				A83CDFBF2131C33800EC16FF /* HomeViewController.swift in Sources */,
 				A83CDFBD2131C33800EC16FF /* AppDelegate.swift in Sources */,
