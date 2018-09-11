@@ -15,6 +15,7 @@
 		A83CDFCF2131D76D00EC16FF /* AddBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83CDFCE2131D76D00EC16FF /* AddBillViewController.swift */; };
 		A83CDFD52131DB6600EC16FF /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83CDFD32131DB6600EC16FF /* BillTableViewCell.swift */; };
 		A83CDFD62131DB6600EC16FF /* BillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83CDFD42131DB6600EC16FF /* BillTableViewCell.xib */; };
+		A8675BF92145916300568107 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8675BF82145916300568107 /* Bill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A83CDFCE2131D76D00EC16FF /* AddBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillViewController.swift; sourceTree = "<group>"; };
 		A83CDFD32131DB6600EC16FF /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		A83CDFD42131DB6600EC16FF /* BillTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillTableViewCell.xib; sourceTree = "<group>"; };
+		A8675BF82145916300568107 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		A83CDFBB2131C33800EC16FF /* BillApp */ = {
 			isa = PBXGroup;
 			children = (
+				A8675BF72145914D00568107 /* Classes */,
 				A83CDFC82131C33900EC16FF /* Info.plist */,
 				A83CDFCE2131D76D00EC16FF /* AddBillViewController.swift */,
 				A83CDFBC2131C33800EC16FF /* AppDelegate.swift */,
@@ -79,6 +82,14 @@
 				A83CDFD42131DB6600EC16FF /* BillTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A8675BF72145914D00568107 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A8675BF82145916300568107 /* Bill.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A83CDFD52131DB6600EC16FF /* BillTableViewCell.swift in Sources */,
+				A8675BF92145916300568107 /* Bill.swift in Sources */,
 				A83CDFBF2131C33800EC16FF /* HomeViewController.swift in Sources */,
 				A83CDFBD2131C33800EC16FF /* AppDelegate.swift in Sources */,
 				A83CDFCF2131D76D00EC16FF /* AddBillViewController.swift in Sources */,

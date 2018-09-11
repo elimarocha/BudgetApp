@@ -187,20 +187,22 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Never" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLJ-J2-hdH">
-                                                <rect key="frame" x="313.5" y="12" width="45.5" height="76"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZBx-bL-MHg">
+                                                <rect key="frame" x="247" y="35" width="120" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="gvv-OI-R61"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="h9A-O6-8Z8" firstAttribute="leading" secondItem="FnG-64-QDF" secondAttribute="leading" constant="16" id="0SK-97-40D"/>
-                                            <constraint firstItem="rLJ-J2-hdH" firstAttribute="top" secondItem="FnG-64-QDF" secondAttribute="top" constant="12" id="7ZT-RT-Yf4"/>
                                             <constraint firstItem="h9A-O6-8Z8" firstAttribute="top" secondItem="FnG-64-QDF" secondAttribute="top" constant="12" id="RUa-YC-S3F"/>
-                                            <constraint firstAttribute="bottom" secondItem="rLJ-J2-hdH" secondAttribute="bottom" constant="12" id="YEw-BP-4Fv"/>
-                                            <constraint firstAttribute="trailing" secondItem="rLJ-J2-hdH" secondAttribute="trailing" constant="16" id="b8K-yq-mqE"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZBx-bL-MHg" secondAttribute="trailing" constant="8" id="nRr-hE-44C"/>
+                                            <constraint firstItem="ZBx-bL-MHg" firstAttribute="centerY" secondItem="h9A-O6-8Z8" secondAttribute="centerY" id="pev-No-dD4"/>
                                             <constraint firstAttribute="bottom" secondItem="h9A-O6-8Z8" secondAttribute="bottom" constant="12" id="uO8-tU-pT5"/>
                                         </constraints>
                                     </view>
@@ -256,9 +258,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="amountTextField" destination="LKg-JN-Qd6" id="Dvm-Da-Ncf"/>
+                        <outlet property="autoPaySwitch" destination="TLR-hE-i8z" id="az0-1z-sl5"/>
                         <outlet property="categoryTextField" destination="cMM-f4-ncc" id="azh-l8-HXg"/>
                         <outlet property="dateTextField" destination="FQg-D1-yAp" id="Vlb-RZ-26R"/>
                         <outlet property="doneButton" destination="cKq-j0-pEZ" id="uLo-iI-Plm"/>
+                        <outlet property="repeatCategoryTextField" destination="ZBx-bL-MHg" id="7Gc-hh-M9j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1YU-CZ-i0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
