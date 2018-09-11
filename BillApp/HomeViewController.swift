@@ -8,16 +8,12 @@
 
 import UIKit
 
-struct BillsContainer {
-    var quantity: Int = 0
-}
-
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var billsContainer: BillsContainer = BillsContainer()
+    var billsContainer: [Bill] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +43,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return billsContainer.quantity
+        return billsContainer.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,7 +51,7 @@ extension HomeViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BillTableViewCell.reuseIdentifier, for: indexPath) as? BillTableViewCell else {
             return UITableViewCell()
         }
-    
+    cell.configureCell(bill: billsContainer[indexPath.row])
         return cell
     }
     
@@ -67,7 +63,7 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            billsContainer.quantity = billsContainer.quantity - 1
+            billsContainer.remove(at: indexPath.row)
             tableView.reloadData()
         }
     }

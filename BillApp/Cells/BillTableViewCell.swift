@@ -11,19 +11,29 @@ import UIKit
 class BillTableViewCell: UITableViewCell {
 
     static let reuseIdentifier = String(describing: BillTableViewCell.self)
-    
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        dateLabel.text = "Monday\n 08/27"
+       // dateLabel.text = "Monday\n 08/27"
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func dateToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd"
+    
+        let myString = formatter.string(from: date)
+        return myString
+       
+    }
+    
+    func configureCell(bill: Bill) {
+        amountLabel.text = "$" + bill.amount
+        categoryLabel.text = bill.category
+        dateLabel.text = dateToString(date: bill.dueDate)
     }
     
 }
