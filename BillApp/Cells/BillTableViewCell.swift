@@ -14,6 +14,7 @@ class BillTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var paidButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +32,7 @@ class BillTableViewCell: UITableViewCell {
     }
     
     func configureCell(bill: Bill) {
-        amountLabel.text = "$" + bill.amount
+        amountLabel.text = bill.amount
         categoryLabel.text = bill.category
         dateLabel.text = dateToString(date: bill.dueDate)
     }

@@ -14,10 +14,17 @@ class SignInViewController: UIViewController {
    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cancelBarButton.target = self
+        cancelBarButton.action = #selector(dismissNavagation)
         
+    }
+    
+    @objc func dismissNavagation() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning()

@@ -27,8 +27,8 @@ class HomeViewController: UIViewController {
     }
     
     private func customizeView() {
-        title = "BillsApp"
-        monthLabel.text = "August 2018"
+        title = "Bills Buster"
+        monthLabel.text = getCurrentMonth()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -39,6 +39,18 @@ class HomeViewController: UIViewController {
         tableView.estimatedRowHeight = 150.0
         tableView.rowHeight = UITableViewAutomaticDimension
     }
+    
+    private func getCurrentMonth() -> String {
+        let today = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM - yyyy"
+        
+        let myString = formatter.string(from: today)
+        return myString
+        
+       
+    }
+    
 }
 
 extension HomeViewController: UITableViewDataSource {

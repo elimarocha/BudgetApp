@@ -33,6 +33,7 @@ class AddBillViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         installView()
+        amountTextField.addTarget(self, action: #selector(myTextFieldDidChange), for: .editingChanged)
     }
     
     private func installView() {
@@ -51,6 +52,13 @@ class AddBillViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
+    }
+    
+    @objc func myTextFieldDidChange(_ textField: UITextField) {
+        
+        if let amountString = textField.text?.currencyInputFormatting() {
+            textField.text = amountString
+        }
     }
     
     @objc func dismissKeyboard() {
@@ -75,7 +83,7 @@ class AddBillViewController: UIViewController {
     
     func createBill() -> Bill {
        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "MM/dd/yyyy"
         let date = dateFormatter.date(from: dateTextField.text ?? "")
 
         
@@ -89,20 +97,32 @@ class AddBillViewController: UIViewController {
 
     
     func checkInputFields() -> Bool {
+         let alert = UIAlertView()
         var check = true
         if amountTextField.text?.isEmpty ?? true {
+            alert.title = "Amount is Empty"
+            alert.message = "Please Fill the Amount to add a Bill"
             check = false
         }
         else if dateTextField.text?.isEmpty ?? true {
+            alert.title = "Date is Empty"
+            alert.message = "Please Fill the Due Date to add a Bill"
             check = false
         }
         else if categoryTextField.text?.isEmpty ?? true {
+            alert.title = "Category is not Selected"
+            alert.message = "Please Select a Category to add a Bill"
             check = false
         }
         else if repeatCategoryTextField.text?.isEmpty ?? true {
+            alert.title = "Repeat is not Selected"
+            alert.message = "Please Select a Repeat Option to add a Bill"
             check = false
         }
-        
+        if check == false {
+        alert.addButton(withTitle: "OK")
+            alert.show()
+        }
         return check
     }
     
@@ -159,6 +179,36 @@ class AddBillViewController: UIViewController {
 extension AddBillViewController: UITextFieldDelegate {
     
     
+}
+
+extension String {
+    
+    // formatting text for currency textField
+    func currencyInputFormatting() -> String {
+        
+        var number: NSNumber!
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currencyAccounting
+        formatter.currencySymbol = "$"
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        
+        var amountWithPrefix = self
+        
+        // remove from String: "$", ".", ","
+        let regex = try! NSRegularExpression(pattern: "[^0-9]", options: .caseInsensitive)
+        amountWithPrefix = regex.stringByReplacingMatches(in: amountWithPrefix, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count), withTemplate: "")
+        
+        let double = (amountWithPrefix as NSString).doubleValue
+        number = NSNumber(value: (double / 100))
+        
+        // if first number is 0 or all numbers were deleted
+        guard number != 0 as NSNumber else {
+            return ""
+        }
+        
+        return formatter.string(from: number)!
+    }
 }
 
 extension AddBillViewController: UIPickerViewDataSource {
