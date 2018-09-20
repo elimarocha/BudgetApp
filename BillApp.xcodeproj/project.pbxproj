@@ -12,7 +12,6 @@
 		2C6B433E21383C9800B3EEC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C6B433D21383C9800B3EEC6 /* GoogleService-Info.plist */; };
 		2C6B43402138556D00B3EEC6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6B433F2138556D00B3EEC6 /* SignInViewController.swift */; };
 		A815A6F42147FA0A0079BEC2 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A815A6F32147FA0A0079BEC2 /* Bill.swift */; };
-		A822297821513CCE0068D75A /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = A822297721513CCE0068D75A /* image.png */; };
 		A83CDFBD2131C33800EC16FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83CDFBC2131C33800EC16FF /* AppDelegate.swift */; };
 		A83CDFBF2131C33800EC16FF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83CDFBE2131C33800EC16FF /* HomeViewController.swift */; };
 		A83CDFC22131C33800EC16FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83CDFC02131C33800EC16FF /* Main.storyboard */; };
@@ -21,6 +20,7 @@
 		A83CDFCF2131D76D00EC16FF /* AddBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83CDFCE2131D76D00EC16FF /* AddBillViewController.swift */; };
 		A83CDFD52131DB6600EC16FF /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83CDFD32131DB6600EC16FF /* BillTableViewCell.swift */; };
 		A83CDFD62131DB6600EC16FF /* BillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83CDFD42131DB6600EC16FF /* BillTableViewCell.xib */; };
+		A8C7D8A7215306E0000D93EA /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7D8A6215306E0000D93EA /* CheckBox.swift */; };
 		DB1304A8ABAF07038C22663A /* Pods_BillApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A4E4C2900076314AFED4C0 /* Pods_BillApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,6 @@
 		2C6B433F2138556D00B3EEC6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		687E7C59D46FEFE223BCA2E2 /* Pods-BillApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BillApp/Pods-BillApp.release.xcconfig"; sourceTree = "<group>"; };
 		A815A6F32147FA0A0079BEC2 /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
-		A822297721513CCE0068D75A /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image.png; path = ../../../../../Downloads/image.png; sourceTree = "<group>"; };
 		A8248AB466D1E6252BA6C267 /* Pods-BillApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BillApp/Pods-BillApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A83CDFB92131C33800EC16FF /* BillApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A83CDFBC2131C33800EC16FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +42,7 @@
 		A83CDFCE2131D76D00EC16FF /* AddBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillViewController.swift; sourceTree = "<group>"; };
 		A83CDFD32131DB6600EC16FF /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		A83CDFD42131DB6600EC16FF /* BillTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillTableViewCell.xib; sourceTree = "<group>"; };
+		A8C7D8A6215306E0000D93EA /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		B1A4E4C2900076314AFED4C0 /* Pods_BillApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -62,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				A815A6F32147FA0A0079BEC2 /* Bill.swift */,
+				A8C7D8A6215306E0000D93EA /* CheckBox.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -109,7 +110,6 @@
 			children = (
 				A83CDFD32131DB6600EC16FF /* BillTableViewCell.swift */,
 				A83CDFD42131DB6600EC16FF /* BillTableViewCell.xib */,
-				A822297721513CCE0068D75A /* image.png */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -196,7 +196,6 @@
 				2C6B433E21383C9800B3EEC6 /* GoogleService-Info.plist in Resources */,
 				A83CDFC42131C33900EC16FF /* Assets.xcassets in Resources */,
 				A83CDFC22131C33800EC16FF /* Main.storyboard in Resources */,
-				A822297821513CCE0068D75A /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +251,7 @@
 			files = (
 				A815A6F42147FA0A0079BEC2 /* Bill.swift in Sources */,
 				2C593631213EC4A30095AAE4 /* CreateAccountViewController.swift in Sources */,
+				A8C7D8A7215306E0000D93EA /* CheckBox.swift in Sources */,
 				A83CDFD52131DB6600EC16FF /* BillTableViewCell.swift in Sources */,
 				A83CDFBF2131C33800EC16FF /* HomeViewController.swift in Sources */,
 				A83CDFBD2131C33800EC16FF /* AppDelegate.swift in Sources */,

@@ -23,9 +23,7 @@ class AddBillViewController: UIViewController {
     private let repeatCategoryPickerView = UIPickerView()
     
     enum Constants {
-        static let categories = ["Auto", "Cable Tv", "CellPhone", "ChildCare", "Credit Card", "Education", "Electricity", "Entertainment", "Gas",
-                                 "Gifts", "Home", "Insurance", "Internet","Medical", "Mortgage", "Parking", "Pets", "Renr", "Security", "Tax",
-                                 "Telephone", "Transportation","Water", "Other"]
+        static let categories = ["Auto", "Cable Tv", "CellPhone", "ChildCare", "Credit Card", "Education", "Electricity", "Entertainment", "Gas","Gifts", "Home", "Insurance", "Internet","Medical", "Mortgage", "Parking", "Pets", "Rent", "Security", "Tax","Telephone", "Transportation","Water", "Other"]
         static let repeatCategories = ["Never", "Every Week", "Every 2 Weeks", "Every Month", "Every 2 Months",
                                        "Every 3 Months","Every 4 Months", "Every 6 Months", "Every Year"]
     }

@@ -61,10 +61,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IQL-dl-91j"/>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1v-PF-7OB">
-                        <rect key="frame" x="235" y="31" width="79" height="61"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button" image="image.png"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Z0-5D-ewk" customClass="CheckBox" customModule="BillApp" customModuleProvider="target">
+                        <rect key="frame" x="298" y="43" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="7cm-xh-V1p"/>
+                            <constraint firstAttribute="width" constant="36" id="Wgo-kh-9Gk"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
                     </button>
                 </subviews>
                 <constraints>
@@ -72,6 +75,8 @@
                     <constraint firstItem="tNK-F0-YzL" firstAttribute="centerY" secondItem="mtk-5p-tqg" secondAttribute="centerY" id="HQW-hj-nsz"/>
                     <constraint firstItem="bIJ-rP-4up" firstAttribute="centerY" secondItem="mtk-5p-tqg" secondAttribute="centerY" id="TCg-Th-27e"/>
                     <constraint firstAttribute="trailingMargin" secondItem="tNK-F0-YzL" secondAttribute="trailing" constant="16" id="WsJ-Ka-AYI"/>
+                    <constraint firstItem="1Z0-5D-ewk" firstAttribute="centerY" secondItem="tNK-F0-YzL" secondAttribute="centerY" id="Wzy-4E-xrl"/>
+                    <constraint firstItem="tNK-F0-YzL" firstAttribute="leading" secondItem="1Z0-5D-ewk" secondAttribute="trailing" constant="36" id="ZhI-Qk-tO5"/>
                     <constraint firstItem="mtk-5p-tqg" firstAttribute="leading" secondItem="bIJ-rP-4up" secondAttribute="trailing" constant="16" id="giF-mn-GbT"/>
                     <constraint firstItem="bIJ-rP-4up" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="hJ2-9Q-az7"/>
                     <constraint firstItem="mtk-5p-tqg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="yvi-tV-c5x"/>
@@ -82,13 +87,12 @@
                 <outlet property="amountLabel" destination="zw2-Ah-Bk5" id="z5u-ur-AK4"/>
                 <outlet property="categoryLabel" destination="6TK-yb-gCU" id="GJp-0x-p5m"/>
                 <outlet property="dateLabel" destination="tNK-F0-YzL" id="aYz-G5-dlJ"/>
-                <outlet property="paidButton" destination="r1v-PF-7OB" id="Lky-j8-xq1"/>
+                <outlet property="imageCategory" destination="bIJ-rP-4up" id="NMF-j3-I1e"/>
             </connections>
             <point key="canvasLocation" x="89" y="91"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Camera" width="50" height="50"/>
-        <image name="image.png" width="639" height="474"/>
     </resources>
 </document>
