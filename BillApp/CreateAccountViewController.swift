@@ -10,14 +10,19 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 class CreateAccountViewController: UIViewController {
-    
+    var ref: DatabaseReference!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var repassword: UITextField!
     
+    @IBOutlet weak var username: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
     }
     
@@ -27,20 +32,36 @@ class CreateAccountViewController: UIViewController {
         
     }
     @IBAction func CreateAccount(_ sender: Any) {
-        if self.repassword.text! == self.password.text!{
-        Auth.auth().createUser(withEmail: self.email.text!, password: self.password.text!){ (user, error) in
-            if self.repassword.text! == self.password.text!{
-            if user != nil {
-                ToastView.shared.short(self.view, txt_msg: "You signed up")
-            }
-            if error != nil{
-                ToastView.shared.short(self.view, txt_msg: "Account already exist")
-            }
-            }
-            }    }
-        else{
-            ToastView.shared.short(self.view, txt_msg: "Passwords dont match")
-        }
+        
+            
+           
+                if self.repassword.text! == self.password.text!{
+                    Auth.auth().createUser(withEmail: self.email.text!, password: self.password.text!){ (user, error) in
+                        if self.repassword.text! == self.password.text!{
+                            self.ref = Database.database().reference()
+                            let customE : String = (self.username.text!)
+                            if user != nil {
+                                ToastView.shared.short(self.view, txt_msg: "You signed up")
+                                
+                                self.ref.child("AppUsers").child(customE).setValue(["username": self.email.text!])
+                                
+                                func createEmail() -> Email {
+                                    let email = Email(Email: customE )
+                                    return email
+                                }
+                            }
+                            if error != nil{
+                                ToastView.shared.short(self.view, txt_msg: "Can't sign up")
+                            }
+                        }
+                    }
+                    
+                }
+                else{
+                    ToastView.shared.short(self.view, txt_msg: "Passwords dont match")
+                }
+           
+        
         }
     
     

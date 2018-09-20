@@ -21,5 +21,6 @@ class Bill {
         self.autoPay = autoPay
         self.category = category
         self.paymentRepeat = paymentRepeat
+       
     }
 }

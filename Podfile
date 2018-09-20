@@ -8,4 +8,5 @@ target 'BillApp' do
   # Pods for BillApp
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 end

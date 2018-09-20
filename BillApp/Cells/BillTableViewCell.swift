@@ -7,19 +7,29 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class BillTableViewCell: UITableViewCell {
-
+    
+    var ref: DatabaseReference!
     static let reuseIdentifier = String(describing: BillTableViewCell.self)
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
+    
+    
+
+         var yourVariable = 0;
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
        // dateLabel.text = "Monday\n 08/27"
     }
+    
 
     func dateToString(date: Date) -> String {
         let formatter = DateFormatter()
@@ -30,10 +40,30 @@ class BillTableViewCell: UITableViewCell {
        
     }
     
+    
     func configureCell(bill: Bill) {
+        
+        self.ref = Database.database().reference()
         amountLabel.text = "$" + bill.amount
         categoryLabel.text = bill.category
         dateLabel.text = dateToString(date: bill.dueDate)
+        let post = [
+            "BillAmount": bill.amount ,
+            "Category": categoryLabel.text!,
+            "Date":   dateLabel.text!,
+            "PaymentRepeat": bill.paymentRepeat
+        ]
+        
+        
+                let userID = Auth.auth().currentUser!.uid
+                 self.ref.child("AppUsers").child(userID).child(String(yourVariable)).setValue([post])
+               
+        yourVariable = yourVariable + 1;
+    
+        
+       
+        
+        
     }
     
 }
