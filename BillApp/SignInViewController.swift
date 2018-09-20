@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 class SignInViewController: UIViewController {
-   
+    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
