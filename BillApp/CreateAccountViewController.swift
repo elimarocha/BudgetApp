@@ -45,10 +45,7 @@ class CreateAccountViewController: UIViewController {
                                 
                                 self.ref.child("AppUsers").child(customE).setValue(["username": self.email.text!])
                                 
-                                func createEmail() -> Email {
-                                    let email = Email(Email: customE )
-                                    return email
-                                }
+                              
                             }
                             if error != nil{
                                 ToastView.shared.short(self.view, txt_msg: "Can't sign up")
